@@ -1,1 +1,2 @@
+require 'WhistTable'
 require 'Team'
