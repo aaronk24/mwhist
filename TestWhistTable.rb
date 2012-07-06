@@ -1,4 +1,5 @@
 require "WhistTable"
+require "Team"
 require "test/unit"
  
 class TestWhistTable < Test::Unit::TestCase
