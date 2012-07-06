@@ -1,1 +1,2 @@
 require 'TestWhistTable'
+require 'TestTeam'
