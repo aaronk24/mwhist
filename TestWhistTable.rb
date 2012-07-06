@@ -11,8 +11,9 @@ class TestWhistTable < Test::Unit::TestCase
     assert_instance_of(WhistTable, @new_table)
   end
   
-  def test_join_table
+  def test_add_team
     team1 = Team.new
+    @new_table.add_team(team1)
   end
   
 end
