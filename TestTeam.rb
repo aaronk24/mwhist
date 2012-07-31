@@ -11,7 +11,8 @@ class TestTeam < Test::Unit::TestCase
   end
   
   def test_add_player
-    
+    player1 = Player.new
+    @new_team.add_player(player1)
   end
   
 end
