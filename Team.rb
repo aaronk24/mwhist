@@ -1,4 +1,12 @@
 class Team
-  def add_player(new_player)
+  attr :players, false
+  
+  def initialize
+    @players = []
   end
+  
+  def add_player(new_player)
+    @players += [new_player]
+  end
+  
 end
