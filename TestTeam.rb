@@ -2,17 +2,13 @@ require "Player"
 require "Team"
 class TestTeam < Test::Unit::TestCase
   
-  def setup
-    @new_team = Team.new
-  end
   
   def test_constructor
-    assert_instance_of(Team, @new_team)
+    assert_instance_of(Team, Team.new)
   end
   
   def test_add_player
-    player1 = Player.new
-    @new_team.add_player(player1)
+    Team.new.add_player(Player.new)
   end
   
 end
