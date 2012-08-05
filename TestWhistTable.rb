@@ -1,5 +1,6 @@
 require "WhistTable"
 require "Team"
+require "Player"
 require "test/unit"
  
 class TestWhistTable < Test::Unit::TestCase
@@ -20,6 +21,26 @@ class TestWhistTable < Test::Unit::TestCase
     myTable.add_team(team1);
     assert_equal(team0, myTable.teams[0])
     assert_equal(team1, myTable.teams[1])
+  end
+  
+  def test_player_positions
+    myTable = WhistTable.new
+    team1 = Team.new
+    playerSouth = Player.new
+    playerNorth = Player.new
+    team2 = Team.new
+    playerWest = Player.new
+    playerEast = Player.new
+    team1.add_player(playerSouth)
+    team1.add_player(playerNorth)
+    team2.add_player(playerWest)
+    team2.add_player(playerEast)
+    myTable.add_team(team1)
+    myTable.add_team(team2)
+    assert_equal(playerSouth, myTable.player_south)
+    assert_equal(playerNorth, myTable.player_north)
+    assert_equal(playerEast, myTable.player_east)
+    assert_equal(playerWest, myTable.player_west)
   end
   
 end
