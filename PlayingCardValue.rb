@@ -4,7 +4,8 @@ class PlayingCardValue
     @description = newDescription
   end
 
-  PlayingCardValue::ACE = PlayingCardValue.new('Ace')  
+  PlayingCardValue::ACE = PlayingCardValue.new('Ace')
+  PlayingCardValue::KING = PlayingCardValue.new('King')
 
   private_class_method :new
   
