@@ -1,0 +1,3 @@
+class PlayingCardSuit
+  
+end
