@@ -1,8 +1,17 @@
+require 'PlayingCardColor'
 class PlayingCardSuit
-  PlayingCardSuit::CLUBS = PlayingCardSuit.new
-  PlayingCardSuit::SPADES = PlayingCardSuit.new
-  PlayingCardSuit::HEARTS = PlayingCardSuit.new
-  PlayingCardSuit::DIAMONDS = PlayingCardSuit.new
+  attr_reader :color
+  
+  def initialize (newColor)
+    @color = newColor
+  end
+  
+  PlayingCardSuit::CLUBS = PlayingCardSuit.new(PlayingCardColor::BLACK)
+  PlayingCardSuit::SPADES = PlayingCardSuit.new(PlayingCardColor::BLACK)
+  PlayingCardSuit::HEARTS = PlayingCardSuit.new(PlayingCardColor::RED)
+  PlayingCardSuit::DIAMONDS = PlayingCardSuit.new(PlayingCardColor::RED)
+  
+  
   
   private_class_method :new
 end
