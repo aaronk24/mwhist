@@ -6,4 +6,12 @@ class TestPlayingCardSuit < Test::Unit::TestCase
     assert_instance_of(PlayingCardSuit, PlayingCardSuit::HEARTS)
     assert_instance_of(PlayingCardSuit, PlayingCardSuit::DIAMONDS)
   end
+  
+  def test_private_constructor
+    begin
+      disallowedValue = PlayingCardSuit.new
+    rescue
+    end
+    assert_nil(disallowedValue)
+  end
 end
