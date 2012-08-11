@@ -18,5 +18,8 @@ class TestPlayingCardSuit < Test::Unit::TestCase
   
   def test_suit_colors
     assert_equal(PlayingCardColor::BLACK, PlayingCardSuit::CLUBS.color)
+    assert_equal(PlayingCardColor::BLACK, PlayingCardSuit::SPADES.color)
+    assert_equal(PlayingCardColor::RED, PlayingCardSuit::DIAMONDS.color)
+    assert_equal(PlayingCardColor::RED, PlayingCardSuit::HEARTS.color)
   end
 end
