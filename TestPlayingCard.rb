@@ -30,4 +30,11 @@ class TestPlayingCard < Test::Unit::TestCase
     )
   end
   
+  def test_not_equal_cards
+    assert_equal(
+      PlayingCard.new(PlayingCardValue::TWO, PlayingCardSuit::HEARTS).suit,
+      PlayingCard.new(PlayingCardValue::THREE, PlayingCardSuit::HEARTS).suit
+    )
+  end
+  
 end
