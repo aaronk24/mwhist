@@ -5,4 +5,7 @@ class PlayingCard
     @suit = newSuit
   end
   
+  def ==(other)
+    other.value == self.value and other.suit == self.suit
+  end
 end
