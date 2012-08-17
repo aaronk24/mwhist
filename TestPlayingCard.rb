@@ -37,4 +37,20 @@ class TestPlayingCard < Test::Unit::TestCase
     )
   end
   
+  def test_eql
+    assert(
+      PlayingCard.new(PlayingCardValue::FOUR, PlayingCardSuit::DIAMONDS).eql?(
+        PlayingCard.new(PlayingCardValue::FOUR, PlayingCardSuit::DIAMONDS)
+      )
+    )
+  end
+  
+  def test_not_eql
+    assert(
+      ! PlayingCard.new(PlayingCardValue::FOUR, PlayingCardSuit::DIAMONDS).eql?(
+        PlayingCard.new(PlayingCardValue::FIVE, PlayingCardSuit::DIAMONDS)
+      )
+    )
+  end
+  
 end

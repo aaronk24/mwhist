@@ -1,5 +1,4 @@
 require 'PlayingCardDeck'
-require 'set'
 class TestPlayingCardDeck < Test::Unit::TestCase
   def test_constructor
     assert_instance_of(PlayingCardDeck, PlayingCardDeck.new)
@@ -18,6 +17,7 @@ class TestPlayingCardDeck < Test::Unit::TestCase
       nbr_cards_dealt += 1 
     end
     assert_equal(52, cards_dealt.size)
+    #assert_equal(cards_dealt, cards_dealt.uniq)
   end
   
 end

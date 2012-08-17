@@ -6,6 +6,14 @@ class PlayingCard
   end
   
   def ==(other)
-    other.value == self.value and other.suit == self.suit
+    other.value == @value and other.suit == @suit
+  end
+  
+  def hash
+    @value.hash ^ @suit.hash
+  end
+  
+  def eql?(other)
+    other.value == @value and other.suit == @suit
   end
 end
