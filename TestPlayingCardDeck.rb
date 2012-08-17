@@ -9,14 +9,14 @@ class TestPlayingCardDeck < Test::Unit::TestCase
   end
   
   def test_deck_deal
-    myDeck = PlayingCardDeck.new
-    nbrCardsDealt = 0 #stops what could otherwise be an infinite loop
-    cardsDealt = Array.new
-    while cardDealt = myDeck.deal_random_card and nbrCardsDealt < 60
-      cardsDealt << cardDealt
-      nbrCardsDealt += 1 
+    my_deck = PlayingCardDeck.new
+    nbr_cards_dealt = 0 #stops what could otherwise be an infinite loop
+    cards_dealt = Array.new
+    while card_dealt = my_deck.deal_random_card and nbr_cards_dealt < 60
+      cards_dealt << card_dealt
+      nbr_cards_dealt += 1 
     end
-    assert_equal(52, cardsDealt.size)
+    assert_equal(52, cards_dealt.size)
   end
   
 end
